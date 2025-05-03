@@ -8,7 +8,7 @@ public class CheckDigit
    public static int getCheck(int num) 
    {  
      int checksum = 0;
-     for (int i=7; i<getNumberOfDigits(num); i--) checksum += getDigit(num, 8-i);
+     for (int i=7; i>7-getNumberOfDigits(num); i--) checksum += getDigit(num, 8-i) * i;
      return getDigit(checksum, getNumberOfDigits(checksum));
    }
  
